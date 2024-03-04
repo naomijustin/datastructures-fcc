@@ -8,4 +8,15 @@ function linearSearch(array, target) {
     return -1; // if we don't terminate, we will return -1
 }
 
-console.log(linearSearch([1,2,3,4,5], 5));
+function verify(index) {
+    if (index != -1) {
+        console.log("Target found at index: " + index);
+    } else {
+        console.log("Target not found in list");
+    }
+}
+
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let result = linearSearch(numbers, 1);
+
+verify(result);
