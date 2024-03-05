@@ -17,6 +17,10 @@ function verify(index) {
 }
 
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-let result = linearSearch(numbers, 1);
+let result;
 
+result = linearSearch(numbers, 12);
+verify(result);
+
+result = linearSearch(numbers, 5);
 verify(result);
