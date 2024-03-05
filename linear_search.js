@@ -8,6 +8,8 @@ function linearSearch(array, target) {
     return -1; // if we don't terminate, we will return -1
 }
 
+
+// === Verify Result ===
 function verify(index) {
     if (index != -1) {
         console.log("Target found at index: " + index);
