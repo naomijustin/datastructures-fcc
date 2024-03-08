@@ -1,16 +1,16 @@
 function binarySearch(array, key) {
-    let left = 0;
-    let right = array.length - 1;
+    let first = 0;
+    let last = array.length - 1;
 
-    while (left <= right) {
-        const mid = left + Math.floor((right - left) / 2); // Find middle
+    while (first <= last) {
+        const mid = first + Math.floor((last - first) / 2); // Find middle
         if (array[mid] === key) {
             return mid;
         }
-        if (array[mid] < key) { // key is higher (to the right) - discard left half
-            left = mid + 1;
+        if (array[mid] < key) { // key is higher (to the right/last) - discard left/first half
+            first = mid + 1;
         } else {
-            right = mid - 1; // key is lower (to the left) - discard the right half
+            last = mid - 1; // key is lower (to the left/first) - discard the right/last half
         }
     }
     return -1; // Not found
