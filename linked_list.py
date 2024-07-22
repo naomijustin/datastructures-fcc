@@ -18,7 +18,7 @@ class LinkedList:
     """
 
     def __init__(self): 
-        self.head = None "Same as above"
+        self.head = None
 
     def is_empty(self):
         return self.head == None
@@ -31,5 +31,15 @@ class LinkedList:
         current = self.head
 
         while current:
-            count += 1
+            count = count + 1
             current = current.next_node
+
+
+    def add(self, data):
+        """
+        Adds a new Node containing data at the head of the list
+        Takes O(1) time
+        """
+        new_node = Node(data)
+        new_node.next_node = self.head
+        self.head = new_node
