@@ -29,7 +29,7 @@ class LinkedList:
         Takes 0(n) time
         """
         current = self.head
-
+        count = 0
         while current:
             count = count + 1
             current = current.next_node
