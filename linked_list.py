@@ -62,6 +62,16 @@ class LinkedList:
                 current = current.next_node
         return None
 
+    def insert(self, data, index):
+        if index == 0:
+            self.add(data)
+
+        if index > 0:
+            new = Node(data)
+
+            position = index
+            current = self.head
+
     def __repr__(self):
         """
         Return a string representation of the list.
