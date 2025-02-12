@@ -90,6 +90,11 @@ class LinkedList:
             prev_node.next_node = new
             new.next_node = next_node
 
+    def remove(self, key):
+        current = self.head
+        previous = None
+        found = False
+
     def __repr__(self):
         """
         Return a string representation of the list.
