@@ -105,6 +105,7 @@ class LinkedList:
             else:
                 previous = current
                 current = current.next_node
+        return current
 
     def __repr__(self):
         """
