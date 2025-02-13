@@ -95,6 +95,17 @@ class LinkedList:
         previous = None
         found = False
 
+        while current and not found:
+            if current.data == key and current == self.head:
+                found = True
+                self.head = current.next_node
+            elif current.data == key:
+                found = True
+                previous.next_node = current.next_node
+            else:
+                previous = current
+                current = current.next_node
+
     def __repr__(self):
         """
         Return a string representation of the list.
