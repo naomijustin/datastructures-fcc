@@ -112,6 +112,28 @@ class LinkedList:
                 current = current.next_node
         return current
 
+    def removeAtIndex(self, index):
+        found = False
+
+        if index == 0:
+            found = True
+            self.head = current.next_node
+        elif index > 0:
+            position = index
+            current = self.head
+            previous = None
+
+            while position > 1:
+                current = current.next_node
+                position -= 1
+
+            prev_node = current
+            next_node = current.next_node
+
+            """ Up to here """
+            
+        
+
     def __repr__(self):
         """
         Return a string representation of the list.
