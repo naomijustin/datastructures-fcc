@@ -114,6 +114,7 @@ class LinkedList:
 
     def removeAtIndex(self, index):
         found = False
+        current = self.head
 
         if index == 0:
             found = True
@@ -123,14 +124,14 @@ class LinkedList:
             current = self.head
             previous = None
 
-            while position > 1 and not found:
+            while position > 0 and not found:
+                previous = current
                 current = current.next_node
                 position -= 1
 
-                if position == 1:
-                    found = True
-                    previous.next_node = current.next_node
-                    current = current.next_node
+        if position == 0:
+            found = True
+            previous.next_node = current.next_node
         
         return current
 
