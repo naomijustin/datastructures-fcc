@@ -123,16 +123,16 @@ class LinkedList:
             current = self.head
             previous = None
 
-            while position > 1:
+            while position > 1 and not found:
                 current = current.next_node
                 position -= 1
 
-            prev_node = current
-            next_node = current.next_node
-
-            """ Up to here """
-            
+                if position == 1:
+                    found = True
+                    previous.next_node = current.next_node
+                    current = current.next_node
         
+        return current
 
     def __repr__(self):
         """
