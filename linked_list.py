@@ -129,9 +129,13 @@ class LinkedList:
                 current = current.next_node
                 position -= 1
 
-        if position == 0:
-            found = True
-            previous.next_node = current.next_node
+            if position == 0:
+                found = True
+                if current.next_node != None:
+                    previous.next_node = current.next_node
+                else:
+                    previous.next_node = None
+                    
         
         return current
 
