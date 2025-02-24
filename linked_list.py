@@ -113,6 +113,7 @@ class LinkedList:
         return current
 
     def removeAtIndex(self, index):
+        size = self.size()
         found = False
         current = self.head
 
@@ -120,23 +121,27 @@ class LinkedList:
             found = True
             self.head = current.next_node
         elif index > 0:
-            position = index
-            current = self.head
-            previous = None
+            if index >= size:
+                current = 'Not found'
+            else:
+                position = index
+                current = self.head
+                previous = None
 
-            while position > 0 and not found:
-                previous = current
-                current = current.next_node
-                position -= 1
+                while current and position > 0 and not found:
+                    previous = current
+                    current = current.next_node
+                    position -= 1
 
-            if position == 0:
-                found = True
-                if current.next_node != None:
-                    previous.next_node = current.next_node
-                else:
-                    previous.next_node = None
-                    
-        
+                if position == 0:
+                    found = True
+                    if index < size:
+                        previous.next_node = current.next_node
+                    else:
+                        previous.next_node = None
+        else:
+            current = 'Not found'
+
         return current
 
     def __repr__(self):
