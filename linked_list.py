@@ -113,6 +113,12 @@ class LinkedList:
         return current
 
     def removeAtIndex(self, index):
+        """
+        Takes an index to remove a node at, returning the 
+        node that has been removed or 'Not found' if the 
+        index doesn't exist.
+        Runs using linear time O(n). 
+        """
         size = self.size()
         found = False
         current = self.head
