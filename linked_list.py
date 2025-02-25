@@ -62,6 +62,23 @@ class LinkedList:
                 current = current.next_node
         return None
 
+    def searchAtIndex(self, index):
+        current = self.head
+        position = index
+        found = False
+        size = self.size()
+
+        if index == 0:
+            found = True
+        elif index > 0:
+            while current and not found:
+                if position == 0:
+                    found = True
+                else:
+                    current = current.next_node
+                    position -= 1
+        return current
+
     def insert(self, data, index):
         """
         Inserts a new Node containing data at index position
