@@ -63,6 +63,11 @@ class LinkedList:
         return None
 
     def searchAtIndex(self, index):
+        """
+        Takes index as an argument and retuns the node at this 
+        index node or 'Not found' if the index doesn't exist.
+        Runs in linear time O(n)
+        """
         current = self.head
         position = index
         found = False
@@ -71,12 +76,17 @@ class LinkedList:
         if index == 0:
             found = True
         elif index > 0:
-            while current and not found:
-                if position == 0:
-                    found = True
-                else:
-                    current = current.next_node
-                    position -= 1
+            if index >= size:
+                current = 'Not found'
+            else:
+                while current and not found:
+                    if position == 0:
+                        found = True
+                    else:
+                        current = current.next_node
+                        position -= 1
+        else:
+            current = 'Not found'
         return current
 
     def insert(self, data, index):
