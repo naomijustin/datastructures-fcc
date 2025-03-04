@@ -1,0 +1,1 @@
+def merge_sort(list): """ starting function definition """
