@@ -16,3 +16,12 @@ def merge_sort(list):
     right = merge_sort(right_half) # Recursive section of right
 
     return merge(left, right) # Merges left and right sublist backwards
+
+    def split(list):
+        """
+        Divide the unsorted list at midpoint into sublists
+        Returns two sublists - left and right
+        """
+
+        mid = len(list)//2 # // Floor division operator
+        left = list[:mid] # Slicing syntax
