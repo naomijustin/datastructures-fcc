@@ -8,7 +8,11 @@ def merge_sort(list):
     Combine: Merge the sorted sublists created in previous step
     """
 
-    if len(list) <= 1:
+    if len(list) <= 1: # Stopping condition
         return list
     
-    left_half, right_half = split(list)
+    left_half, right_half = split(list) # Split list into 2
+    left = merge_sort(left_half) # Recursive section of left
+    right = merge_sort(right_half) # Recursive section of right
+
+    return merge(left, right) # Merges left and right sublist backwards
