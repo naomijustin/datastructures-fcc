@@ -28,3 +28,13 @@ def merge_sort(list):
         right = list[mid:] # Slicing - starting at the midpoint and going to the end of the list
 
         return left, right
+
+    def merge(left, right):
+        """
+        Merges two lists (arrays), sorting them in the process
+        Returns a new merged list
+        """
+        l = []
+        i = 0
+        j = 0
+        
