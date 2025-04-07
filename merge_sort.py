@@ -25,3 +25,4 @@ def merge_sort(list):
 
         mid = len(list)//2 # // Floor division operator
         left = list[:mid] # Slicing syntax
+        right = list[mid:] # Slicing - starting at the midpoint and going to the end of the list
