@@ -45,3 +45,11 @@ def merge_sort(list):
             else:
                 l.append(right[j])
                 j += 1 # or j = j + 1
+
+        while i < len(left):
+            l.append(left[i])
+            i += 1
+
+        while j < len(right):
+            l.append(right[j])
+            j += 1
