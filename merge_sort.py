@@ -53,3 +53,8 @@ def merge_sort(list):
         while j < len(right):
             l.append(right[j])
             j += 1
+
+alist = [54, 62, 93, 17, 77, 31, 44, 55, 20]
+l = merge_sort(alist)
+
+print(l)
