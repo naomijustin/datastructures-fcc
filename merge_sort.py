@@ -60,4 +60,4 @@ def verify_sorted(list):
     n = len(list)
 
     if n == 0 or n == 1:
-        
+        return True
