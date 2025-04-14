@@ -63,3 +63,8 @@ def verify_sorted(list):
         return True
 
     return list[0] < list[1] and verify_sorted(list[1:])
+
+alist = [54, 62, 93, 17, 77, 31, 44, 55, 20]
+l = merge_sort(alist)
+print(verify_sorted(alist)) # Should return false
+print(verify_sorted(l)) # Should return true
