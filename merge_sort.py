@@ -35,6 +35,8 @@ def merge(left, right):
     """
     Merges two lists (arrays), sorting them in the process
     Returns a new merged list
+
+    Runs in overall O(n) time
     """
     l = []
     i = 0
