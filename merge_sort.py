@@ -36,7 +36,11 @@ def merge(left, right):
     Merges two lists (arrays), sorting them in the process
     Returns a new merged list
 
-    Runs in overall O(n) time
+    Divide: Find the midpoint of the list and divide into sublists
+    Conquer: Recursively sort the sublists created in the previous step
+    Combine: Merge the sorted sublists created in the previous step
+
+    Takes O(n log n) time
     """
     l = []
     i = 0
