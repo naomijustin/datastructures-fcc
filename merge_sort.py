@@ -22,7 +22,7 @@ def split(list):
     Divide the unsorted list at midpoint into sublists
     Returns two sublists - left and right
 
-    Takes overall O(log n) time
+    Takes overall O(k log n) time
     """
 
     mid = len(list)//2 # // Floor division operator
