@@ -30,3 +30,6 @@ def split(linked_list):
         right_half = None
 
         return left_half, right_half
+    else:
+        size = linked_list.size()
+        mid = size//2
