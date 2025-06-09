@@ -177,6 +177,10 @@ class LinkedList:
 
         return current
 
+    def node_at_index(self, index):
+        if index == 0:
+            return self.head
+
     def __repr__(self):
         """
         Return a string representation of the list.
